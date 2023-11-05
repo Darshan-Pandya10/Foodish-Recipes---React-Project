@@ -1,8 +1,8 @@
 import '../App.css';
 import { FaAngleDoubleRight } from 'react-icons/fa';
 
-function RecipeCard({ recipeObj }) {
-  const { cuisineType, image, label } = recipeObj.recipe;
+function RecipeCard({ recipe , getRecipe }) {
+  const { cuisineType, image, label } = recipe;
 
   return (
     <div className="recipe-card p-2 min-h-[25rem] my-8 mx-5 rounded-lg">

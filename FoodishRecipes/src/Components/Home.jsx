@@ -1,12 +1,16 @@
 import React, { useState, useRef, useEffect, createContext } from 'react';
 import SearchBar from './SearchBar';
 import RecipeList from './RecipeList';
+import SortingMenu from './SortingMenu';
 export const RecipeContext = createContext(null);
 
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState(''); // State to control fetch request
   const [recipes, setRecipes] = useState([]);
+  const [sortingValue , setSortingValue] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [searchPerformed , SetSearchPerformed] = useState(false);
   const isMounted = useRef(false);
   const api_id = '50c0683d';
   const api_key = 'cbbd8bf8c49fc90fca3e05462a8d77f4';
@@ -20,22 +24,23 @@ function Home() {
   };
 
   const fetchData = async () => {
-    
+    setLoading(true)
     try {
       const response = await fetch(url, options);
       const result = await response.json();
     //   console.log(result);
       setRecipes(result);
+      SetSearchPerformed(true)
+      setLoading(false)
     } catch (error) {
       console.error(error);
-    }
-    finally{
-
     }
   };
 
   function cleanUpFunc() {
-    setSearchQuery(''), setSearchQuery('');
+    setSearchQuery(''),
+    setSearchQuery(''),
+    SetSearchPerformed(true)
   }
 
 
@@ -55,12 +60,29 @@ function Home() {
     setSearchQuery(searchIngredient);
   };
 
+  const handleSorting = (selectedValue) => {
+    setSortingValue(selectedValue)
+  }
+
 
   return (
     <RecipeContext.Provider value={{recipes}}>
     <div className='home w-screen'>
-      <SearchBar onSearch={handleSearch} />
-      <RecipeList />
+
+      <SearchBar 
+      onSearch={handleSearch} 
+      />
+
+      <SortingMenu 
+      onSorting={handleSorting} 
+      />
+
+      <RecipeList 
+      sortingValue={sortingValue} 
+      loading={loading}
+      searchPerformed={searchPerformed}
+      />
+
     </div>
     </RecipeContext.Provider>
   );

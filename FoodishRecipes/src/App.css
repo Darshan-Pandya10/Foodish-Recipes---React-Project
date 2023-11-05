@@ -135,7 +135,45 @@ form {
   color: var(--hover-color);
 }
 
+/* SortingMenu */
+
+.sorting-menu {
+  font-family: var(--secondary-font);
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  color: var(--primary-color);
+}
+
+.dropdown {
+  background-color: rgb(212, 212, 212);
+  width: fit-content;
+  letter-spacing: 0.2rem;
+  color: black;
+}
+
 /* RecipeList */
+
+/* Loader */
+
+.loader {
+  margin: 3rem auto;
+  border: 1rem solid var(--primary-color);
+  border-radius: 50%;
+  border-top: 1rem solid var(--hover-color);
+  width: 6rem;
+  height: 6rem;
+  animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* RecipeCard */
 
@@ -180,6 +218,103 @@ form {
 
 .card-button:hover a {
   color: var(--hover-color);
+}
+
+/* Recipe-Pop-Up */
+
+.recipe-pop-up {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.recipe-pop-up h2 {
+  font-family: var(--primary-font);
+  letter-spacing: 0.2rem;
+}
+
+.recipe-pop-up h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 10rem;
+  letter-spacing: 0.1rem;
+  margin: 0.5rem 0rem;
+  font-family: var(--secondary-font);
+  color: var(--hover-color);
+  font-size: 1.2rem;
+}
+
+.recipe-pop-up .group {
+  margin: 1.5rem;
+}
+
+.recipe-pop-up p {
+  font-family: var(--secondary-font);
+  margin: 0.3rem;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.recipe-pop-up .mealType {
+  display: flex;
+}
+
+.recipe-pop-up .mealType p {
+  background-color: #000000;
+  color: var(--hover-color);
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.recipe-pop-up a {
+  font-family: var(--secondary-font);
+  color: var(--hover-color);
+  text-decoration: none;
+  background-color: #000000;
+}
+
+/* Pagination */
+
+.list-and-pagination {
+  width: 95vw;
+  margin: 0px auto;
+  height: auto;
+  margin-bottom: 10rem;
+}
+
+.paginationBtns {
+  color: #f1f3f8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0px auto;
+  font-size: 1.1rem;
+  font-family: var(--primary-font);
+  background-color: #232931;
+}
+
+.paginationBtns li {
+  letter-spacing: 0.1rem;
+  border: none;
+}
+
+.paginationBtns li a {
+  cursor: pointer;
+  display: block;
+  padding: 0.75rem 1.2rem;
+}
+
+.paginationBtns li a:hover {
+  background-color: #f1f3f8;
+  color: black;
+}
+
+.paginationActive a {
+  background-color: var(--hover-color);
+  color: black;
 }
 
 
