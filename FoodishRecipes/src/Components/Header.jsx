@@ -10,7 +10,6 @@ import { ThemeContext } from '../App';
 function Header() {
     const themeData = useContext(ThemeContext);
     const {theme , toggleTheme} = themeData;
-    
   return (
     <div className="header w-screen h-24 flex justify-between items-center">
       <h2 className="logo flex items-center justify-around left-0">

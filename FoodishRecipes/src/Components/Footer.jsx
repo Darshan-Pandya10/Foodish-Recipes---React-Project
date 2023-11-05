@@ -2,7 +2,7 @@ import '../App.css';
 
 function Footer() {
   return (
-    <div className="footer fixed bottom-0 w-screen h-24 p-8 text-center bg-black text-base md:tracking-widest">
+    <div className="footer sticky bottom-0 w-screen h-24 p-8 text-center bg-black text-base md:tracking-widest">
       <p>
         project from{' '}
         <a target="_blank" href="https://www.chingu.io/">
