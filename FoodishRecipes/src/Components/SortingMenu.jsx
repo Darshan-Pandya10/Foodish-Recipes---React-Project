@@ -3,7 +3,7 @@ import '../App.css';
 
 const SortingMenu = ({onSorting}) => {
 
-  const [selectedValue, setSelectedValue] = useState(''); // Default selected value
+  const [selectedValue, setSelectedValue] = useState('');
 
   const handleDropdownChange = (event) => {
     onSorting(event.target.value)

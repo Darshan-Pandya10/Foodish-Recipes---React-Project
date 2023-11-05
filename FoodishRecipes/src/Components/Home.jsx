@@ -6,7 +6,7 @@ export const RecipeContext = createContext(null);
 
 
 function Home() {
-  const [searchQuery, setSearchQuery] = useState(''); // State to control fetch request
+  const [searchQuery, setSearchQuery] = useState('');
   const [recipes, setRecipes] = useState([]);
   const [sortingValue , setSortingValue] = useState('');
   const [loading, setLoading] = useState(false);
@@ -28,7 +28,6 @@ function Home() {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-    //   console.log(result);
       setRecipes(result);
       SetSearchPerformed(true)
       setLoading(false)
@@ -38,7 +37,6 @@ function Home() {
   };
 
   function cleanUpFunc() {
-    setSearchQuery(''),
     setSearchQuery(''),
     SetSearchPerformed(true)
   }
@@ -56,7 +54,6 @@ function Home() {
   }, [searchQuery]);
 
   const handleSearch = (searchIngredient) => {
-    // Update the searchQuery state to trigger the fetch in useEffect
     setSearchQuery(searchIngredient);
   };
 

@@ -110,7 +110,7 @@ function RecipeList({sortingValue ,loading ,searchPerformed}) {
     </div>
   )
     }
-    }
+  }
 
 
 export default RecipeList

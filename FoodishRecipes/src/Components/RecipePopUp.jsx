@@ -5,7 +5,6 @@ import '../App.css';
 
 function RecipePopUp({ data, closeRecipePopUp }) {
   if (data) {
-    // console.log(data)
     const { label, mealType, ingredients, totalNutrients, url } = data;
     const nutrientArray = Object.values(totalNutrients);
     return (
@@ -18,7 +17,6 @@ function RecipePopUp({ data, closeRecipePopUp }) {
         </button>
         <h2 className="m-4 text-2xl">{label}</h2>
 
-        {/* check if mealType is present in the response or not. */}
         {mealType ? (
           <div className="group mealType">
             {mealType.map((type) => {
@@ -40,7 +38,6 @@ function RecipePopUp({ data, closeRecipePopUp }) {
           </div>
         )}
 
-        {/* check if ingredients is present in the response or not. */}
         {ingredients ? (
           <div className="group ingredients">
             <h3 className="topic">
@@ -62,7 +59,6 @@ function RecipePopUp({ data, closeRecipePopUp }) {
           </div>
         )}
 
-        {/* check if Nutrients is present in the response or not. */}
         {totalNutrients ? (
           <div className="group Nutrients">
             <div>

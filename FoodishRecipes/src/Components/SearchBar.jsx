@@ -16,8 +16,8 @@ function SearchBar({ onSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Call the onSearch function with the current ingredient value when the form is submitted
     onSearch(ingredient);
+    setIngredient('');
   };
 
   // hero image background
