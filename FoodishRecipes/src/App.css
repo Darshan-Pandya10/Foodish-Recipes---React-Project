@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --view-height : 100vh;
+  --header-height : 6rem;
+  --footer-height: 6rem;
+  --primary-font: 'Sansita Swashed', sans-serif;
+  --secondary-font: 'Space Grotesk', sans-serif;
+}
+
+/* theme */
+
+#light {
+  --primary-color: #232931;
+  --secondary-color: #eeeeee;
+  --hover-color: #4ecca3;
+}
+
+#dark {
+  --secondary-color: #000000;
+  --primary-color: #eeeeee;
+  --hover-color: #7d98e3;
+}
+
+.app {
+  background-color: var(--secondary-color);
+  transition: background-color 150ms ease-in 50ms;
+}
+
+/* Header */
+
+.header {
+  color: var(--primary-color);
+  position: relative;
+  padding: 1rem;
+  padding-right: 0rem;
+}
+
+.logo {
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+.logo-icon {
+  color: var(--hover-color);
+  font-size: 1.7rem;
+}
+
+nav {
+  font-family: var(--primary-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a,
+nav button {
+  text-decoration: none;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+nav button {
+  right: 0;
+  background-color: var(--hover-color);
+  font-size: 1.3rem;
+  color: #ffffff;
+  border-radius: 2rem 0rem 0rem 2rem;
+}
+
+/* Home & About */
+
+/* Home */
+
+.home , .about {
+  min-height: calc(var(--view-height) - (var(--header-height) + var(--footer-height)));
+}
+
+/* About */
+
+.about .heading {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+}
+
+.about .description {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+}
+
+.FAQCard:hover {
+  border: 2px solid var(--hover-color);
+}
+
+.question {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+}
+
+.FAQCard p {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+}
+
+.FAQCard button {
+  color: var(--primary-color);
+}
+
+.FAQCard:hover .question-btn-div button {
+  color: var(--hover-color);
+}
+
+/* Footer */
+
+.footer {
+  font-family: var(--secondary-font);
+}
+
+.footer p {
+  color: white;
+}
+
+.footer p a {
+  color: var(--hover-color);
+  text-decoration: none;
+}
