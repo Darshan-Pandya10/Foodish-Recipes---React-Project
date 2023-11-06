@@ -175,6 +175,7 @@ form {
   }
 }
 
+
 /* RecipeCard */
 
 .error {
@@ -280,7 +281,7 @@ form {
   width: 95vw;
   margin: 0px auto;
   height: auto;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .paginationBtns {
