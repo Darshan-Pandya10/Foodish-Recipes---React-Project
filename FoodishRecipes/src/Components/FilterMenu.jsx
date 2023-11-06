@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import '../App.css';
 
-const SortingMenu = ({onSorting}) => {
+const FilterMenu = ({onFilter}) => {
 
   const [selectedValue, setSelectedValue] = useState('');
 
   const handleDropdownChange = (event) => {
-    onSorting(event.target.value)
+    onFilter(event.target.value)
     setSelectedValue(event.target.value)
   };
 
 
   return (
     <>
-      <div className="sorting-menu  flex items-center justify-around w-fit px-4 h-auto mx-auto">
-        <h1>Sort By :</h1>
+      <div className="filter-menu  flex items-center justify-around w-fit px-4 h-auto mx-auto">
+        <h1>Filter By :</h1>
         <select
           value={selectedValue}
           className="dropdown cursor-pointer py-4 px-6 mx-4"
@@ -31,4 +31,4 @@ const SortingMenu = ({onSorting}) => {
   );
 };
 
-export default SortingMenu;
+export default FilterMenu;

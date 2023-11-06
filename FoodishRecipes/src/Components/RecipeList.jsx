@@ -6,7 +6,7 @@ import RecipePopUp from './RecipePopUp'
 import { v4 as uuidv4 } from 'uuid';
 
 
-function RecipeList({sortingValue ,loading ,searchPerformed}) {
+function RecipeList({filterValue ,loading ,searchPerformed}) {
     const recipeData = useContext(RecipeContext)
     const recipes = recipeData.recipes.hits
 
@@ -35,8 +35,8 @@ function RecipeList({sortingValue ,loading ,searchPerformed}) {
 
   // Sorting logic
   if(recipes){
-  const filterRecipeList = sortingValue !== ''
-      ? recipes.filter((recipeObj) => recipeObj.recipe.mealType[0] === sortingValue)
+  const filterRecipeList = filterValue !== ''
+      ? recipes.filter((recipeObj) => recipeObj.recipe.mealType[0] === filterValue)
       : recipes;
       console.log(filterRecipeList)
 

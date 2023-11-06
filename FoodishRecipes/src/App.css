@@ -135,9 +135,9 @@ form {
   color: var(--hover-color);
 }
 
-/* SortingMenu */
+/* FilterMenu */
 
-.sorting-menu {
+.filter-menu {
   font-family: var(--secondary-font);
   font-size: 1.1rem;
   letter-spacing: 0.2rem;
@@ -157,11 +157,11 @@ form {
 
 .loader {
   margin: 3rem auto;
-  border: 1rem solid var(--primary-color);
+  border: 0.6rem solid var(--primary-color);
   border-radius: 50%;
-  border-top: 1rem solid var(--hover-color);
-  width: 6rem;
-  height: 6rem;
+  border-top: 0.6rem solid var(--hover-color);
+  width: 5rem;
+  height: 5rem;
   animation: spinner 4s linear infinite;
 }
 

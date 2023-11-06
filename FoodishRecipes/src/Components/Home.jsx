@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect, createContext } from 'react';
 import SearchBar from './SearchBar';
 import RecipeList from './RecipeList';
-import SortingMenu from './SortingMenu';
+import FilterMenu from './FilterMenu';
 export const RecipeContext = createContext(null);
 
 
 function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [recipes, setRecipes] = useState([]);
-  const [sortingValue , setSortingValue] = useState('');
+  const [filterValue , setFilterValue] = useState('');
   const [loading, setLoading] = useState(false);
   const [searchPerformed , SetSearchPerformed] = useState(false);
   const isMounted = useRef(false);
@@ -57,8 +57,8 @@ function Home() {
     setSearchQuery(searchIngredient);
   };
 
-  const handleSorting = (selectedValue) => {
-    setSortingValue(selectedValue)
+  const handleFilter = (selectedValue) => {
+    setFilterValue(selectedValue)
   }
 
 
@@ -70,12 +70,12 @@ function Home() {
       onSearch={handleSearch} 
       />
 
-      <SortingMenu 
-      onSorting={handleSorting} 
+      <FilterMenu 
+      onFilter={handleFilter} 
       />
 
       <RecipeList 
-      sortingValue={sortingValue} 
+      filterValue={filterValue} 
       loading={loading}
       searchPerformed={searchPerformed}
       />
