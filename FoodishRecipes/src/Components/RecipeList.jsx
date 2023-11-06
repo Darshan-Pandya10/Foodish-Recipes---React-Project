@@ -10,6 +10,12 @@ function RecipeList({filterValue ,loading ,searchPerformed}) {
     const recipeData = useContext(RecipeContext)
     const recipes = recipeData.recipes.hits
 
+    if (searchPerformed && loading) {
+    return <div className="recipe-list text-lg tracking-widest text-center text-black">
+      <div class="loader"></div>
+      </div>;
+  }
+
   // Pop Up Card logic 
   const [isPopUpVisible, setIsPopUpVisible] = useState(false);
   const [popUpData, setPopUpData] = useState(null);
@@ -48,6 +54,7 @@ function RecipeList({filterValue ,loading ,searchPerformed}) {
     pagesVisited + recipesPerPage,
   );
 
+
   const recipesList =
     recipes && recipes.length !== 0 ? (
       displayRecipes.map((recipeObj) => {
@@ -72,11 +79,7 @@ function RecipeList({filterValue ,loading ,searchPerformed}) {
     );
 
     
-     if (searchPerformed && loading) {
-    return <div className="recipe-list text-lg tracking-widest text-center text-black">
-      <div class="loader"></div>
-      </div>;
-  }
+     
     
   return (
     <div className="list-and-pagination">  

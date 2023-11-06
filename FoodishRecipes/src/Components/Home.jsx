@@ -25,11 +25,12 @@ function Home() {
 
   const fetchData = async () => {
     setLoading(true)
+    SetSearchPerformed(true)
+
     try {
       const response = await fetch(url, options);
       const result = await response.json();
       setRecipes(result);
-      SetSearchPerformed(true)
       setLoading(false)
     } catch (error) {
       console.error(error);
