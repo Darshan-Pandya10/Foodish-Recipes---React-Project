@@ -51,7 +51,7 @@ function SearchBar({ handleSearch }) {
         <input
           className="p-2 bg-white text-[1.2rem] tracking-widest cursor-pointer"
           type="text"
-          placeholder="Enter ingredient"
+          placeholder="Search by ingredient(s)"
           value={ingredient}
           onChange={handleInputChange}
         />
