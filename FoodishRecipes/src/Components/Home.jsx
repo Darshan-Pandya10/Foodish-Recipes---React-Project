@@ -67,11 +67,11 @@ function Home() {
     <div className='home w-screen'>
 
       <SearchBar 
-      onSearch={handleSearch} 
+      handleSearch={handleSearch} 
       />
 
       <FilterMenu 
-      onFilter={handleFilter} 
+      handleFilter={handleFilter} 
       />
 
       <RecipeList 

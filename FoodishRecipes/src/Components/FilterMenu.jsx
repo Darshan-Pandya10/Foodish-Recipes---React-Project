@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import '../App.css';
 
-const FilterMenu = ({onFilter}) => {
+const FilterMenu = ({handleFilter}) => {
 
   const [selectedValue, setSelectedValue] = useState('');
 
   const handleDropdownChange = (event) => {
-    onFilter(event.target.value)
+    handleFilter(event.target.value)
     setSelectedValue(event.target.value)
   };
 

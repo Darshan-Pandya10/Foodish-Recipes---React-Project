@@ -5,7 +5,7 @@ import { ThemeContext } from '../App';
 import { BiSolidSearch } from 'react-icons/bi';
 import '../App.css'
 
-function SearchBar({ onSearch }) {
+function SearchBar({ handleSearch }) {
   const themeData = useContext(ThemeContext);
   const { theme, toggleTheme } = themeData;
   const [ingredient, setIngredient] = useState('');
@@ -16,7 +16,7 @@ function SearchBar({ onSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSearch(ingredient);
+    handleSearch(ingredient);
     setIngredient('');
   };
 
