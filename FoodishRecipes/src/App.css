@@ -120,7 +120,6 @@ form {
 
 .search-bar {
   width: 100vw;
-  height: 50vh;
   padding-top: 5rem;
 }
 
@@ -128,7 +127,6 @@ form {
   font-family: var(--secondary-font);
   outline: none !important;
   border-radius: 1rem 10rem 10rem 1rem;
-  min-width: 50vw;
 }
 
 .search-btn {
