@@ -87,11 +87,11 @@ nav button {
 }
 
 /* Home */
-
+/* 
 #dark .home{
   background-color: #1a1625;
   padding-bottom: 0.5rem;
-}
+} */
 
 
 /* SearchBar */
@@ -128,7 +128,7 @@ form {
   font-family: var(--secondary-font);
   outline: none !important;
   border-radius: 1rem 10rem 10rem 1rem;
-  width: 50vw;
+  min-width: 50vw;
 }
 
 .search-btn {
