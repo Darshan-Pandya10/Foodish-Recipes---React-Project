@@ -40,7 +40,7 @@ function SearchBar({ handleSearch }) {
 
   return (
    <div
-        className="search-bar flex flex-col items-center mt-0 mx-auto mb-12"
+        className="search-bar flex flex-col items-center mx-auto mb-12"
         style={theme === 'light' ? lightThemeBg : darkThemeBg}
       >
         <div className="intro text-center m-4">

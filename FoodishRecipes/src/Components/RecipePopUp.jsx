@@ -2,13 +2,14 @@ import { v4 as uuidv4 } from 'uuid';
 import { FaAngleDoubleRight } from 'react-icons/fa';
 import { RxCross1 } from 'react-icons/rx';
 import '../App.css';
+import SocialShare from './SocialShare';
 
 function RecipePopUp({ data, closeRecipePopUp }) {
   if (data) {
     const { label, mealType, ingredients, totalNutrients, url } = data;
     const nutrientArray = Object.values(totalNutrients);
     return (
-      <div className="recipe-pop-up sm:w-[80vw] h-auto absolute top-28 p-6 rounded-lg ">
+      <div className="recipe-pop-up sm:w-[75vw] h-auto absolute top-28 p-6 rounded-lg ">
         <button
           onClick={() => closeRecipePopUp()}
           className="exit-btn text-2xl absolute right-6 top-6 bg-transparent border-none outline-none cursor-pointer"
@@ -103,6 +104,9 @@ function RecipePopUp({ data, closeRecipePopUp }) {
             <p>no url found.</p>
           </div>
         )}
+
+          <SocialShare label={label} url={url}/>
+
       </div>
     );
   }

@@ -22,8 +22,8 @@
 
 #dark {
   --primary-color: #eeeeee;
-  --secondary-color: #000000;
-  --hover-color: #7d98e3;
+  --secondary-color: #120d1b;
+  --hover-color: #8973f9;
 }
 
 .app {
@@ -38,6 +38,7 @@
   position: relative;
   padding: 1rem auto;
   padding-right: 0rem;
+  box-shadow: 0px 2px 10px -5px var(--hover-color);
 }
 
 .logo {
@@ -86,6 +87,12 @@ nav button {
 }
 
 /* Home */
+
+#dark .home{
+  background-color: #1a1625;
+  padding-bottom: 0.5rem;
+}
+
 
 /* SearchBar */
 
@@ -265,7 +272,7 @@ form {
   background-color: #000000;
   color: var(--hover-color);
   padding: 1rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
 }
 
 .recipe-pop-up a {
@@ -274,6 +281,23 @@ form {
   text-decoration: none;
   background-color: #000000;
 }
+
+.social-share{
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.social-share .social-heading{
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+  font-family: var(--secondary-font);
+  color: var(--hover-color);
+  margin: 0.5rem auto;
+  letter-spacing: 0.05rem;
+}
+
 
 /* Pagination */
 
@@ -329,6 +353,10 @@ form {
 .about .description {
   font-family: var(--secondary-font);
   color: var(--primary-color);
+}
+
+.FAQCard {
+  border: 2px solid var(--primary-color);
 }
 
 .FAQCard:hover {

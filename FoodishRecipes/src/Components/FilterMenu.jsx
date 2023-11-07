@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 
 const FilterMenu = ({handleFilter}) => {
+  
 
   const [selectedValue, setSelectedValue] = useState('');
 

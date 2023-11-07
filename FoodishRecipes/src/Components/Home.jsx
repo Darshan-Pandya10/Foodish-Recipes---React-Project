@@ -71,9 +71,9 @@ function Home() {
       handleSearch={handleSearch} 
       />
 
-      <FilterMenu 
+      { searchPerformed && <FilterMenu 
       handleFilter={handleFilter} 
-      />
+      /> }
 
       <RecipeList 
       filterValue={filterValue} 

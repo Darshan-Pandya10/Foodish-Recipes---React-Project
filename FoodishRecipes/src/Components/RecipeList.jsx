@@ -12,7 +12,7 @@ function RecipeList({filterValue ,loading ,searchPerformed}) {
 
     if (searchPerformed && loading) {
     return <div className="recipe-list text-lg tracking-widest text-center text-black">
-      <div class="loader"></div>
+      <div className="loader"></div>
       </div>;
   }
 
