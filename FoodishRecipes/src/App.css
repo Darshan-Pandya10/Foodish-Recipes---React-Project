@@ -396,6 +396,10 @@ form {
       outline: none;
     }
 
+    .logo{
+      padding-left: 1rem;
+    }
+
     .show-navbar {
       display: flex;
       flex-direction: column;
