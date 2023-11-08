@@ -9,14 +9,14 @@ function RecipePopUp({ data, closeRecipePopUp }) {
     const { label, mealType, ingredients, totalNutrients, url } = data;
     const nutrientArray = Object.values(totalNutrients);
     return (
-      <div className="recipe-pop-up sm:w-[75vw] h-[70vh] overflow-scroll fixed top-24 p-6 rounded-lg ">
+      <div className="recipe-pop-up w-[90vw] text-base sm:w-[75vw] h-[70vh] overflow-scroll fixed top-24 py-6 px-2 rounded-lg ">
         <button
           onClick={() => closeRecipePopUp()}
           className="exit-btn text-2xl absolute right-6 top-6 bg-transparent border-none outline-none cursor-pointer"
         >
           <RxCross1 />
         </button>
-        <h2 className="m-4 text-2xl">{label}</h2>
+        <h2 className="m-4 mt-8 text-2xl">{label}</h2>
 
         {mealType ? (
           <div className="group mealType">

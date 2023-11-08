@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
+import { v4 as uuidv4 } from 'uuid';
+
 
 const FilterMenu = ({handleFilter}) => {
   
@@ -22,8 +24,9 @@ const FilterMenu = ({handleFilter}) => {
     <>
       <div className="filter-menu  flex items-center justify-center w-fit mx-auto flex-wrap">
         {mealTypeArray.map((mealType) => {
+          const id = uuidv4();
           const {value , label} = mealType
-          return <button className='filter-btn' onClick={handleDropdownChange} value={value}>{label}</button>
+          return <button className='filter-btn' key={id} onClick={handleDropdownChange} value={value}>{label}</button>
         })}
       </div>
     </>
