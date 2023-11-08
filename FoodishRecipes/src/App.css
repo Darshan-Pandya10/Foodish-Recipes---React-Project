@@ -59,6 +59,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: fit-content;
 }
 
 nav a,
@@ -79,6 +80,10 @@ nav button {
   border-radius: 2rem 0rem 0rem 2rem;
 }
 
+.hamburger-btn {
+  display: none;
+}
+
 /* Home & About */
 
 .home,
@@ -87,12 +92,6 @@ nav button {
 }
 
 /* Home */
-/* 
-#dark .home{
-  background-color: #1a1625;
-  padding-bottom: 0.5rem;
-} */
-
 
 /* SearchBar */
 
@@ -291,7 +290,6 @@ form {
   letter-spacing: 0.05rem;
 }
 
-
 /* Pagination */
 
 .list-and-pagination {
@@ -388,3 +386,49 @@ form {
   color: var(--hover-color);
   text-decoration: none;
 }
+
+@media screen and (max-width:720px){
+
+    .hamburger-btn {
+      margin: 0 2rem;
+      display: block;
+      border: none;
+      outline: none;
+    }
+
+    .show-navbar {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: calc(100vh - (var(--header-height) + var(--footer-height)));
+      position: absolute;
+      top: 6rem;
+      right: 0rem;
+      z-index: 9999;
+      background-color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+
+    .show-navbar a {
+      color: var(--secondary-color);
+      padding: 1rem;
+      text-align: center;
+      text-decoration: none;
+    }
+
+     nav a,
+     nav button {
+       margin: 1rem auto;
+       transition: margin 0.3s ease;
+       /* Add the transition property for margin */
+     }
+  
+     nav button {
+       border-radius: 2rem;
+       transition: border-radius 0.3s ease;
+       /* Add the transition property for border-radius */
+     }
+
+  }

@@ -2,14 +2,21 @@ import '../App.css'
 import { PiMoonStarsFill } from 'react-icons/pi';
 import { RiSunFill } from 'react-icons/ri';
 // import { GiSpellBook } from 'react-icons/gi';
+import {GiHamburgerMenu} from 'react-icons/gi'
 import { NavLink } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../App';
 
 
 function Header() {
     const themeData = useContext(ThemeContext);
     const {theme , toggleTheme} = themeData;
+
+    const [isNavbarVisible , setIsNavbarVisible] = useState(false);
+    function toggleNavbar() {
+    setIsNavbarVisible((prevIsNavbarVisible) => !prevIsNavbarVisible);
+}
+
   return (
     <div className="header w-screen h-24 flex justify-between items-center">
       <a href="/"><h2 className="logo flex items-center justify-around left-0">
@@ -18,7 +25,11 @@ function Header() {
           {/* <GiSpellBook /> */}
         </span>
       </h2></a>
-      <nav className="w-fit flex right-0 ">
+      <button className="hamburger-btn" onClick={toggleNavbar}>
+      <GiHamburgerMenu size={26}/>
+      </button>
+    
+     <nav className={`flex right-0 ${isNavbarVisible ? 'show-navbar' : 'hidden'}`}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         {theme === 'light' ? (
@@ -30,7 +41,7 @@ function Header() {
             <PiMoonStarsFill />
           </button>
         )}
-      </nav>
+      </nav> 
     </div>
   )
 }

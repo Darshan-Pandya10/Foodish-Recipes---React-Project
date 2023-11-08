@@ -9,7 +9,7 @@ function RecipePopUp({ data, closeRecipePopUp }) {
     const { label, mealType, ingredients, totalNutrients, url } = data;
     const nutrientArray = Object.values(totalNutrients);
     return (
-      <div className="recipe-pop-up sm:w-[75vw] h-auto absolute top-28 p-6 rounded-lg ">
+      <div className="recipe-pop-up sm:w-[75vw] h-[70vh] overflow-scroll fixed top-24 p-6 rounded-lg ">
         <button
           onClick={() => closeRecipePopUp()}
           className="exit-btn text-2xl absolute right-6 top-6 bg-transparent border-none outline-none cursor-pointer"
