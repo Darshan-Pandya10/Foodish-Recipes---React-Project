@@ -2,7 +2,8 @@ import '../App.css'
 import { PiMoonStarsFill } from 'react-icons/pi';
 import { RiSunFill } from 'react-icons/ri';
 // import { GiSpellBook } from 'react-icons/gi';
-import {GiHamburgerMenu} from 'react-icons/gi'
+import {PiHamburgerBold} from 'react-icons/pi';
+import {LuUtensilsCrossed} from 'react-icons/lu';
 import { NavLink } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { ThemeContext } from '../App';
@@ -26,7 +27,9 @@ function Header() {
         </span>
       </h2></a>
       <button className="hamburger-btn" onClick={toggleNavbar}>
-      <GiHamburgerMenu size={26}/>
+      
+     {isNavbarVisible ? <LuUtensilsCrossed size={26}/> : <PiHamburgerBold size={26}/>}
+      
       </button>
     
      <nav className={`flex right-0 ${isNavbarVisible ? 'show-navbar' : 'hidden'}`}>
