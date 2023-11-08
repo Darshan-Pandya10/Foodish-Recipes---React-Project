@@ -31,20 +31,19 @@ function Header() {
      {isNavbarVisible ? <LuUtensilsCrossed size={26}/> : <PiHamburgerBold size={26}/>}
       
       </button>
-    
-     <nav className={`flex right-0 ${isNavbarVisible ? 'show-navbar' : 'hidden'}`}>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        {theme === 'light' ? (
-          <button onClick={toggleTheme}>
-            <RiSunFill />
-          </button>
+      <nav className={`flex right-0 ${!isNavbarVisible && window.innerWidth <= 720 ? 'show-navbar' : isNavbarVisible && window.innerWidth > 720 ? 'hidden' : 'flex'}`}>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/about">About</NavLink>
+      {theme === 'light' ? (
+        <button onClick={toggleTheme}>
+          <RiSunFill />
+        </button>
         ) : (
           <button onClick={toggleTheme}>
             <PiMoonStarsFill />
           </button>
         )}
-      </nav> 
+      </nav>
     </div>
   )
 }
