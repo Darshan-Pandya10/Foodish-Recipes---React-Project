@@ -49,7 +49,7 @@ function SearchBar({ handleSearch }) {
         </div>
       <form className="flex items-center justify-between my-o mx-auto bg-white pl-2 pr-0 py-o" onSubmit={handleSubmit}>
         <input
-          className="p-2 w-[70vw] sm:min-w-[50vw] bg-white text-[1.2rem] tracking-widest cursor-pointer"
+          className="p-2 w-[60vw] sm:min-w-[35rem] md:min-w-[35rem] bg-white text-[1.2rem] tracking-widest cursor-pointer"
           type="text"
           placeholder="Search by ingredient(s)"
           value={ingredient}

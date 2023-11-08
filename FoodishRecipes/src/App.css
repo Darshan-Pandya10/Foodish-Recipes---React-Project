@@ -1,12 +1,12 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
-  --view-height : 100vh;
-  --header-height : 6rem;
+:root {
+  --view-height: 100vh;
+  --header-height: 6rem;
   --footer-height: 6rem;
   --primary-font: 'Sansita Swashed', sans-serif;
   --secondary-font: 'Space Grotesk', sans-serif;
@@ -84,6 +84,7 @@ nav button {
   display: none;
 }
 
+
 /* Home & About */
 
 .home,
@@ -141,7 +142,7 @@ form {
 
 /* FilterMenu */
 
-.filter-btn{
+.filter-btn {
   padding: 0.5rem 1.5rem;
   margin: 0.5rem;
   letter-spacing: 0.05rem;
@@ -274,13 +275,13 @@ form {
   background-color: #000000;
 }
 
-.social-share{
+.social-share {
   padding: 1rem;
   margin: 0 auto;
   text-align: center;
 }
 
-.social-share .social-heading{
+.social-share .social-heading {
   width: 100%;
   font-size: 1rem;
   text-align: center;
@@ -387,54 +388,3 @@ form {
   text-decoration: none;
 }
 
-@media screen and (max-width:720px){
-
-    .hamburger-btn {
-      margin: 0 2rem;
-      display: block;
-      border: none;
-      outline: none;
-    }
-
-    .logo{
-      padding-left: 1rem;
-    }
-
-    .show-navbar {
-      display: flex;
-      flex-direction: column;
-      width: 100vw;
-      align-items: flex-start;
-      justify-content: flex-start;
-      height: calc(100vh - (var(--header-height) + var(--footer-height)));
-      position: absolute;
-      top: 6rem;
-      right: 0rem;
-      z-index: 9999;
-      background-color: var(--primary-color);
-      transition: all 0.3s ease;
-    }
-
-    .show-navbar a {
-      color: var(--secondary-color);
-      padding: 1rem;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1.3rem;
-    }
-
-     nav a,
-     nav button {
-       margin: 1rem auto;
-       transition: margin 0.3s ease;
-       /* Add the transition property for margin */
-     }
-  
-     nav button {
-       border-radius: 2rem;
-       transition: border-radius 0.3s ease;
-       margin-top: 2.3rem;
-       /* Add the transition property for border-radius */
-     }
-
-  }
