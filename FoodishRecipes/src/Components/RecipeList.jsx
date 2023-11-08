@@ -56,7 +56,7 @@ function RecipeList({filterValue ,loading ,searchPerformed}) {
 
 
   const recipesList =
-    recipes && recipes.length !== 0 ? (
+    recipes && displayRecipes.length !== 0 ? (
       displayRecipes.map((recipeObj) => {
         const id = uuidv4();
         const { recipe } = recipeObj;
@@ -72,7 +72,7 @@ function RecipeList({filterValue ,loading ,searchPerformed}) {
       })
     ) : (
       <div className="recipe-list">
-        <h3 className="text-lg tracking-widest text-center text-black">
+        <h3 className="error text-lg tracking-widest text-center">
           Recipes not Found.
         </h3>
       </div>

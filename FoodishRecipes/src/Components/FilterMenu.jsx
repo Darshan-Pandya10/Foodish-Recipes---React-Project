@@ -14,19 +14,13 @@ const FilterMenu = ({handleFilter}) => {
 
   return (
     <>
-      <div className="filter-menu  flex items-center justify-around w-fit px-4 h-auto mx-auto">
-        <h1>Filter By :</h1>
-        <select
-          value={selectedValue}
-          className="dropdown cursor-pointer py-4 px-6 mx-4"
-          onChange={handleDropdownChange}
-        >
-          <option value="">None</option>
-          <option value="breakfast">Breakfast</option>
-          <option value="brunch">Brunch</option>
-          <option value="lunch/dinner">Lunch / Dinner</option>
-          <option value="teatime">Teatime</option>
-        </select>
+      <div className="filter-menu  flex items-center justify-center w-fit mx-auto flex-wrap">
+        <button className='filter-btn' onClick={handleDropdownChange} value=''>All</button>
+        <button className='filter-btn' onClick={handleDropdownChange} value='breakfast'>Breakfast</button>
+        <button className='filter-btn' onClick={handleDropdownChange} value='brunch'>Brunch</button>
+        <button className='filter-btn' onClick={handleDropdownChange} value='lunch/dinner'>Lunch / Dinner</button>
+        <button className='filter-btn' onClick={handleDropdownChange} value='teatime'>Teatime</button>
+
       </div>
     </>
   );

@@ -142,18 +142,13 @@ form {
 
 /* FilterMenu */
 
-.filter-menu {
-  font-family: var(--secondary-font);
-  font-size: 1.1rem;
-  letter-spacing: 0.2rem;
+.filter-btn{
+  padding: 0.5rem 1.5rem;
+  margin: 0.5rem;
+  letter-spacing: 0.05rem;
+  background-color: var(--hover-color);
   color: var(--primary-color);
-}
-
-.dropdown {
-  background-color: rgb(212, 212, 212);
-  width: fit-content;
-  letter-spacing: 0.2rem;
-  color: black;
+  border-radius: 2rem;
 }
 
 /* RecipeList */
