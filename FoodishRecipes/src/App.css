@@ -153,6 +153,7 @@ form {
 
 /* RecipeList */
 
+
 /* Loader */
 
 .loader {
@@ -201,6 +202,8 @@ form {
 
 .recipe-label {
   font-size: 1.1rem;
+  font-family: var(--primary-font);
+  letter-spacing: 0.05rem;
 }
 
 .recipe-cuisineType {
@@ -211,6 +214,7 @@ form {
 .card-button {
   color: #232931;
   font-family: var(--secondary-font);
+  border: none;
 }
 
 .card-button:hover {
@@ -322,11 +326,18 @@ form {
   cursor: pointer;
   display: block;
   padding: 0.75rem 1.2rem;
+  border: 2px solid transparent;
 }
 
 .paginationBtns li a:hover {
   background-color: #f1f3f8;
   color: black;
+}
+
+.paginationBtns li a:hover {
+  background-color: #f1f3f8;
+  color: black;
+  border: 2px solid var(--hover-color);
 }
 
 .paginationActive a {

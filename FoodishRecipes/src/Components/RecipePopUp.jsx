@@ -73,7 +73,7 @@ function RecipePopUp({ data, closeRecipePopUp }) {
                 const id = uuidv4();
                 return (
                   <p className="nutrient p-[0.2rem]" key={id}>
-                    {nutrient.label}
+                    {nutrient.label} 
                   </p>
                 );
               })}
