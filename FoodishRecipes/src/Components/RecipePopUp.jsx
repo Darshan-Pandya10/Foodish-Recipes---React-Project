@@ -47,7 +47,9 @@ function RecipePopUp({ data, closeRecipePopUp }) {
             </h3>
             {ingredients.map((ingredient) => {
               const id = uuidv4();
-              return <p key={id}>{ingredient.text}</p>;
+              return (
+              <p key={id}>{ingredient.text}</p>
+              );
             })}
           </div>
         ) : (

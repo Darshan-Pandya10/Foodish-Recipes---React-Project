@@ -8,9 +8,9 @@ function RecipeCard({ recipe , getRecipe }) {
   return (
     <div className="recipe-card p-2 min-h-[25rem] my-8 mx-5 rounded-lg">
       <img className="recipe-image" src={image} alt="recipe image" />
-      <h3 className="recipe-label px-0 pt-1 pb-0 my-0 mx-2">{label}</h3>
+      <h3 className="recipe-label px-0 pt-1 my-0 py-2 mx-2 pb-1 border-b-2 border-solid border-red">{label}</h3>
       <p className="recipe-cuisineType p-1 capitalize flex">
-        <span className='mr-1'><TbFlagPin size={26} /></span>
+        <span className='mr-1 text-sm py-1'><TbFlagPin size={20} /></span>
         {cuisineType}
       </p>
       <button
@@ -19,7 +19,7 @@ function RecipeCard({ recipe , getRecipe }) {
           getRecipe(recipe);
         }}
       >
-        <p className='mx-1'>Get More Info</p>
+        <p className='text-sm mx-1'>Get More Info</p>
         <FaAngleDoubleRight />
       </button>
     </div>
