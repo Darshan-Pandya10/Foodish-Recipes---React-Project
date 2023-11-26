@@ -23,21 +23,21 @@ function Home() {
     },
   };
 
-   // store recipes into local storage when recipes changes.
+  //  // store recipes into local storage when recipes changes.
 
-  useEffect(() => {
-  localStorage.setItem('storedrecipes', JSON.stringify(recipes));
-  },[recipes])
+  // useEffect(() => {
+  // localStorage.setItem('storedrecipes', JSON.stringify(recipes));
+  // },[recipes])
 
 
-  // load stored recipes from local storage.
-  useEffect(() => {
-    const loadRecipes = JSON.parse((localStorage.getItem('storedrecipes')))
-    if(loadRecipes && loadRecipes.length > 0){
-            setRecipes(loadRecipes) 
-    }
-    return;
-  },[])
+  // // load stored recipes from local storage.
+  // useEffect(() => {
+  //   const loadRecipes = JSON.parse((localStorage.getItem('storedrecipes')))
+  //   if(loadRecipes && loadRecipes.length > 0){
+  //           setRecipes(loadRecipes) 
+  //   }
+  //   return;
+  // },[])
 
 
   const fetchData = async () => {
@@ -69,7 +69,7 @@ useEffect(() => {
   }
 
   return () => {
-    isMounted.current = false;
+
     cleanUpFunc();
   };
 }, [searchQuery]);
