@@ -24,11 +24,11 @@ function Header() {
           <NavLink to="/about">About</NavLink>
           {theme === 'light' ? (
             <button onClick={toggleTheme}>
-              <RiSunFill />
+              <PiMoonStarsFill />
             </button>
           ) : (
             <button onClick={toggleTheme}>
-              <PiMoonStarsFill />
+              <RiSunFill />
             </button>
           )}
         </nav>
